@@ -17,4 +17,8 @@ class Lesson extends Model
     {
         return $this->belongsTo(Course::class);
     }
+    public function lesson_user()
+    {
+        return $this->belongsTo(Lesson_User::class);
+    }
 }
