@@ -9,8 +9,8 @@ return new class() extends Migration {
     {
         Schema::create('lesson_user', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('lesson_id');
-            $table->unsignedInteger('user_id');
+            $table->foreignId('lesson_id');
+            $table->foreignId('user_id');
             $table->json('game_state')->nullable();
             $table->boolean('completed')->default(false);
             $table->timestamps();
