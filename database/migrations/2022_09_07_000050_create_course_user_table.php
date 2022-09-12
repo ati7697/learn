@@ -9,9 +9,9 @@ return new class() extends Migration {
     {
         Schema::create('course_user', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('course_id');
-            $table->unsignedInteger('current_lesson_id');
+            $table->foreignId('user_id');
+            $table->foreignId('course_id');
+            $table->foreignId('current_lesson_id');
             $table->timestamps();
         });
     }
