@@ -7,6 +7,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -42,13 +43,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function lesson_user()
+    public function lessons(): BelongsToMany
     {
-        return $this->belongsTo(Lesson_User::class);
+        return $this->belongsToMany(Lesson::class);
     }
 
-    public function course_user()
+    public function courses(): BelongsToMany
     {
-        return $this->belongsTo(Course_User::class);
+        return $this->belongsToMany(Course::class);
     }
 }
