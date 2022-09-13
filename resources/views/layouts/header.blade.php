@@ -1,6 +1,6 @@
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 navFont">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://flowbite.com/" class="flex items-center">
+        <a href="https://codinglabs.com.au/" class="flex items-center">
             <img src="https://d2wks4gidu9630.cloudfront.net/f9e7e5eb-767a-4239-a8b4-63b76580c003/svg/codinglabs-logo.svg" class="mr-3 h-6 sm:h-9" alt="codingLabs Logo">
         </a>
         <div class="flex md:order-2">
