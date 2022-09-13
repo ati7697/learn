@@ -47,19 +47,49 @@
             sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
     </div>
-
+{{--image section--}}
     <div class="flex flex-row m-4">
         <div class="flex flex-col w-1/3">
             <div class="flex justify-center mb-3">
                 <img src="{{url('image/empty.jpg')}}" class="w-[300px]">
             </div>
-            <div class="flex ml-7 font-bold">
+            <div class="flex ml-7 font-bold ml-12">
                 <h2>Heading</h2>
             </div>
-            <div class=" flex ml-7 text-justify mr-6 justify-center">
+            <div class=" flex ml-7 text-justify mr-6 justify-center ml-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
+        <div class="flex flex-col w-1/3">
+            <div class="flex justify-center mb-3">
+                <img src="{{url('image/empty.jpg')}}" class="w-[300px]">
+            </div>
+            <div class="flex ml-7 font-bold ml-12">
+                <h2>Heading</h2>
+            </div>
+            <div class=" flex ml-7 text-justify mr-6 justify-center ml-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="flex flex-col w-1/3">
+            <div class="flex justify-center mb-3">
+                <img src="{{url('image/empty.jpg')}}" class="w-[300px]">
+            </div>
+            <div class="flex ml-7 font-bold ml-12">
+                <h2>Heading</h2>
+            </div>
+            <div class=" flex ml-7 text-justify mr-6 justify-center ml-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
 
+    <div class="flex flex-row m-5">
+        <div class="flex w-1/2 h-[500px] m-4 border-2 border-slate-900">
+            box left
+        </div>
+        <div class="flex w-1/2 h-[500px] m-4 border-2 border-slate-900">
+            box right
+        </div>
     </div>
 @endsection
