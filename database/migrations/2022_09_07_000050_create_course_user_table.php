@@ -9,12 +9,9 @@ return new class() extends Migration {
     {
         Schema::create('course_user', function (Blueprint $table) {
             $table->id();
-            // Since we follow the naming conventions
-            // can find id on users/courses
             $table->foreignId('user_id');
             $table->foreignId('course_id');
-            // Will need to specify table
-            $table->foreignID('current_lesson_id')->on('lessons');
+            $table->foreignId('current_lesson_id')->on('lessons');
             $table->timestamps();
         });
     }
