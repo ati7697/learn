@@ -11,7 +11,7 @@ return new class() extends Migration {
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('course_id');
-            $table->foreignId('current_lesson_id')->on('lessons');
+            $table->foreignId('current_lesson_id');
             $table->timestamps();
         });
     }
