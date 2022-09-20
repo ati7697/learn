@@ -1,5 +1,5 @@
-<div class=" bg-gradient-to-r from-gray-600 to-gray-900 w-screen text-white mt-5 p-5 pt-10">
-    <div class="flex flex-row">
+<div class=" bg-gradient-to-r from-gray-600 to-gray-900 w-screen text-white  p-5 pt-10 ">
+    <div class="flex flex-row ml-6">
         <div class="flex flex-col w-1/2">
             <div class="mb-4">
                 <img src="https://d2wks4gidu9630.cloudfront.net/f9e7e5eb-767a-4239-a8b4-63b76580c003/svg/codinglabs-logo.svg" class="mr-3 h-6 sm:h-9" alt="codingLabs Logo">
