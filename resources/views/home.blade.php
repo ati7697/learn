@@ -1,25 +1,14 @@
 @extends('layouts.app')
-<style>
-
-    .card .detail{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 80%;/*100%*/
-        height: 100%;
-        transition: 1s;
-        transform-origin: left;
-        transform: perspective(2000px) rotateY(-90deg);
+<script>
+    function changeBackgroundImage(bgImage) {
+        document.getElementById("bgDiv").style.backgroundImage = "url(" + bgImage + ")";
     }
-    .card:hover .detail{
-        transform: perspective(2000px) rotateY(0deg);
-    }
-</style>
+</script>
 @section('content')
-    <div class="flex flex-col ">
+    <div class="flex flex-col navFont w-screen">
         {{--  top section --}}
-        <div class=" static flex flex-col w-screen h-screen bg-fixed bg-center bg-cover bg-[url('/image/bg.jpg')] bg-blend-darken brightness-50"></div>
-        <div class="absolute flex bottom-60 left-16 text-amber-50 text-8xl">
+        <div class=" static flex flex-col w-screen h-screen bg-fixed bg-center bg-cover bg-[url('/image/bg.jpg')] bg-blend-darken brightness-50 topSection" id="bgDiv"></div>
+        <div class="absolute flex bottom-60 left-16 text-amber-50 text-8xl font-title">
             <h1>Escape with <br> laravel</h1>
         </div>
         <div class="absolute flex bottom-36 left-16">
@@ -36,90 +25,101 @@
         <div class="absolute flex bottom-4 left-16 text-white py-1 px-4 rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
             <p>Certificate</p>
         </div>
-
         <div class="flex flex-row justify-center">
-            <div class=" flex m-4 w-60 h-40  hover:shadow-lg"> <img src="{{url('image/bg.jpg')}}" class="w-[300px] rounded-2xl"></div>
-            <div class="flex m-4 w-60 h-40   hover:shadow-lg"> <img src="{{url('image/bg.jpg')}}" class="w-[300px] rounded-2xl"></div>
-            <div class="flex m-4 w-60 h-40 hover:shadow-lg"> <img src="{{url('image/bg.jpg')}}" class="w-[300px] rounded-2xl"></div>
-            <div class=" flex m-4 w-60 h-40  hover:shadow-lg"><img src="{{url('image/bg.jpg')}}" class="w-[300px] rounded-2xl"></div>
+            <div class=" flex m-4 w-60 h-40"><button onmouseover="changeBackgroundImage('image/bg.jpg')"><img src="{{url('image/bg.jpg')}}" class="w-[300px] rounded-2xl"> </button> </div>
+            <div class=" flex m-4 w-60 h-40"><button onmouseover="changeBackgroundImage('image/image2.jpg')"><img src="{{url('image/image2.jpg')}}" class="w-[300px] rounded-2xl"> </button> </div>
+            <div class="flex m-4 w-60 h-40 "> <button onmouseover="changeBackgroundImage('image/image2.jpg')"><img src="{{url('image/image2.jpg')}}" class="w-[300px] rounded-2xl"> </button></div>
+            <div class=" flex m-4 w-60 h-40"> <button onmouseover="changeBackgroundImage('image/bg.jpg')"><img src="{{url('image/bg.jpg')}}" class="w-[300px] rounded-2xl"></button></div>
         </div>
 
     {{--image section--}}
         <div class="flex flex-col w-screen p-5 mt-36 text-amber-50">
             <div class="flex justify-center text-lg font-bold mt-20"><h1>Improve your Laravel skill with us</h1></div>
-            <div class="flex flex-row m-10  card">
-                <div class="flex flex-col w-1/3 m-3 rounded-xl transition-all ease-in-out delay-150 duration-300  group">
-                    <div class="flex justify-center mb-3  group-hover:translate-x-1 image">
-                        <img src="{{url('image/empty.jpg')}}" class="rounded group-hover:opacity-50">
-                        <div class="detail flex text-justify justify-center m-6 text-black ">
+            <div class="flex flex-row m-10">
+                <div class="flex flex-col w-1/3 m-3 rounded-xl">
+                    <div class="flex flex-col justify-center mb-3 group">
+                            <img src="{{url('image/empty.jpg')}}" class="rounded md:group-hover:opacity-50 md:group-hover:translate-x-1 md:group-hover:blur-sm" >
+                        <div class="flex text-left justify-center m-5 text-black absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150 ">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
+
                     <div class="flex flex-row w-full justify-between">
-                        <div class="flex bg-orange-600 py-1 px-4 ml-2 rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
+                        <div class="flex bg-orange-600 md:py-1 md:px-4 md:ml-2 sm:py-0 sm:px-0 rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
                             <p>Beginner</p>
                         </div>
-                        <div class="flex">
-                            <spann class="m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <div class="flex sm:ml-3 sm:text-[14px]">
+                            <spann class="m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-6 md:h-6 sm:w-5 sm:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
                                 </svg>
                             </spann>
-                            <span class="mt-1">100</span>
+                            <span class="mt-1 ">100</span>
                             <p class="m-1">Students</p>
                         </div>
                     </div>
                     <div class="flex font-bold mt-8 justify-center">
                         <h2>Heading</h2>
+                    </div>
+                    <div class="flex lg:invisible md:invisible lg:m-0 md:m-0 sm:visible sm:m-2 text-justify">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
 
                 </div>
-                <div class="flex flex-col w-1/3 m-3 rounded-xl transition-all ease-in-out delay-150 duration-300  group">
-                    <div class="flex justify-center mb-3  group-hover:translate-x-1 image">
-                        <img src="{{url('image/empty.jpg')}}" class="rounded group-hover:opacity-50">
-                        <div class="detail flex text-justify justify-center m-6 text-black ">
+                <div class="flex flex-col w-1/3 m-3 rounded-xl">
+                    <div class="flex flex-col justify-center mb-3 group">
+                        <img src="{{url('image/empty.jpg')}}" class="rounded md:group-hover:opacity-50 md:group-hover:translate-x-1 md:group-hover:blur-sm" >
+                        <div class="flex text-left justify-center m-5 text-black absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150 ">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
+
                     <div class="flex flex-row w-full justify-between">
-                        <div class="flex bg-orange-600 py-1 px-4 ml-2 rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
+                        <div class="flex bg-orange-600 md:py-1 md:px-4 md:ml-2 sm:py-1 sm:px-2  rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
                             <p>Beginner</p>
                         </div>
-                        <div class="flex">
-                            <spann class="m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <div class="flex sm:ml-3 sm:text-[14px]">
+                            <spann class="m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-6 md:h-6 sm:w-5 sm:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
                                 </svg>
                             </spann>
-                            <span class="mt-1">100</span>
+                            <span class="mt-1 ">100</span>
                             <p class="m-1">Students</p>
                         </div>
                     </div>
                     <div class="flex font-bold mt-8 justify-center">
                         <h2>Heading</h2>
+                    </div>
+                    <div class="flex lg:invisible md:invisible lg:m-0 md:m-0 sm:visible sm:m-2 text-justify">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
 
                 </div>
-                <div class="flex flex-col w-1/3 m-3 rounded-xl transition-all ease-in-out delay-150 duration-300  group">
-                    <div class="flex justify-center mb-3  group-hover:translate-x-1 image">
-                        <img src="{{url('image/empty.jpg')}}" class="rounded group-hover:opacity-50">
-                        <div class="detail flex text-justify justify-center m-6 text-black ">
+                <div class="flex flex-col w-1/3 m-3 rounded-xl">
+                    <div class="flex flex-col justify-center mb-3 group">
+                        <img src="{{url('image/empty.jpg')}}" class="rounded md:group-hover:opacity-50 md:group-hover:translate-x-1 md:group-hover:blur-sm" >
+                        <div class="flex text-left justify-center m-5 text-black absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150 ">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
+
                     <div class="flex flex-row w-full justify-between">
-                        <div class="flex bg-orange-600 py-1 px-4 ml-2 rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
+                        <div class="flex bg-orange-600 md:py-1 md:px-4 md:ml-2 sm:py-1 sm:px-2  rounded-xl hover:bg-orange-400  font-light text-sm  text-center">
                             <p>Beginner</p>
                         </div>
-                        <div class="flex">
-                            <spann class="m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <div class="flex sm:ml-3 sm:text-[14px]">
+                            <spann class="m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-6 md:h-6 sm:w-5 sm:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
                                 </svg>
                             </spann>
-                            <span class="mt-1">100</span>
+                            <span class="mt-1 ">100</span>
                             <p class="m-1">Students</p>
                         </div>
                     </div>
                     <div class="flex font-bold mt-8 justify-center">
                         <h2>Heading</h2>
+                    </div>
+                    <div class="flex lg:invisible md:invisible lg:m-0 md:m-0 sm:visible sm:m-2 text-justify">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
 
                 </div>
@@ -127,22 +127,23 @@
             </div>
         </div>
 
-        <div class="flex flex-col text-amber-50 mt-20">
-            <div class="flex justify-center text-3xl font-bold m-3">
+        {{--purches--}}
+        <div class="flex flex-col  mt-20 bg-gray-100">
+            <div class="flex justify-center text-3xl font-bold m-3 mt-10">
                 <h1>Buy full game</h1>
             </div>
             <div class="flex justify-center text-lg mt-5">
                 <h2>Editions</h2>
             </div>
-            <div class="flex flex-row m-5 mb-36">
-                <div class="flex flex-col w-1/2 h-fit m-4  group hover:translate-y-3 hover:translate-x-2 relative transition ease-in-out delay-300 hover:max-h ">
+            <div class="flex lg:flex-row md:flex-row sm:flex-col sm:content-center xs:content-center xs:flex-col  m-5 mb-36">
+                <div class="flex flex-col w-1/2 h-fit m-4 p-4 group hover:translate-y-3 hover:translate-x-2 hover:shadow-2xl relative transition ease-in-out delay-300 hover:max-h shadow-lg">
                     <div class="flex justify-center ">
                         <img src="{{"/image/empty.jpg"}}">
                     </div>
                     <div class="flex justify-center m-2">
                         <p>Lorem ipsum dolor sit amet</p>
                     </div>
-                    <div class="ml-16 mt-3 invisible group-hover:visible transition ease-out delay-400 ">
+                    <div class="ml-16 mt-3 ">
                         <ul class="list-disc">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Lorem ipsum dolor sit amet</li>
@@ -151,21 +152,21 @@
                         <div class="mt-4"><p>$100</p></div>
                     </div>
 
-                    <div class="flex mb-3 justify-center relative bottom-24 group-hover:bottom-0 group-hover:justify-center group-hover:mt-3">
+                    <div class="flex mb-3 justify-center">
                         <button class=" transition ease-in-out delay-150 bg-orange-500 hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r from-orange-400 to-orange-500 duration-300 text-white font-bold py-2 px-4 rounded-full">
                             Add to card
                         </button>
                     </div>
 
                 </div>
-                <div class="flex flex-col w-1/2 h-fit m-4  group hover:translate-y-3 hover:-translate-x-2 relative transition ease-in-out hover:max-h delay-300">
+                <div class="flex flex-col w-1/2 h-fit m-4 p-4 group hover:translate-y-3 hover:-translate-x-2  hover:shadow-2xl relative transition ease-in-out delay-300 hover:max-h shadow-lg ">
                     <div class="flex justify-center ">
                         <img src="{{"/image/empty.jpg"}}">
                     </div>
                     <div class="flex justify-center m-2">
                         <p>Lorem ipsum dolor sit amet</p>
                     </div>
-                    <div class="ml-16 mt-3 invisible group-hover:visible transition ease-out delay-400 ">
+                    <div class="ml-16 mt-3 ">
                         <ul class="list-disc">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Lorem ipsum dolor sit amet</li>
@@ -174,28 +175,27 @@
                         <div class="mt-4"><p>$100</p></div>
                     </div>
 
-                    <div class="flex mb-3 justify-center relative bottom-24 group-hover:bottom-0 group-hover:justify-center group-hover:mt-3">
-                        <button class="transition ease-in-out delay-150 bg-orange-500 hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r from-orange-400 to-orange-500 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                    <div class="flex mb-3 justify-center">
+                        <button class=" transition ease-in-out delay-150 bg-orange-500 hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r from-orange-400 to-orange-500 duration-300 text-white font-bold py-2 px-4 rounded-full">
                             Add to card
                         </button>
                     </div>
 
                 </div>
-
             </div>
         </div>
     {{-- expectation--}}
-        <div class="flex flex-col text-white mb-20">
-            <div class="flex justify-center font-bold text-4xl">
+        <div class="flex flex-col text-white mb-20 w-screen ">
+            <div class="flex justify-center font-bold text-4xl mt-20">
                 <h1>
                     What to expect?
                 </h1>
             </div>
-            <div class="flex flex-row m-10 justify-center font-bold">
-                <div class="border-2 border-orange-500 p-10 ml-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">+40 Courses</div>
-                <div class="border-2 border-orange-500 p-10 ml-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">+40 Lessons</div>
-                <div class="border-2 border-orange-500 p-10 ml-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">Game and Fun</div>
-                <div class="border-2 border-orange-500 p-10 ml-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">Student material</div>
+            <div class="flex lg:flex-row md:flex-row sm:flex-col xs:flex-col m-10 justify-center text-center font-bold">
+                <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">+40 Courses</div>
+                <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">+40 Lessons</div>
+                <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">Game and Fun</div>
+                <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">Student material</div>
 
             </div>
 

@@ -1,4 +1,4 @@
-<div class=" bg-gradient-to-r from-gray-600 to-gray-900 w-screen text-white  p-5 pt-10 ">
+<div class=" bg-gradient-to-r from-gray-600 to-gray-900 w-screen text-white  p-5 pt-10 w-screen">
     <div class="flex flex-row ml-6">
         <div class="flex flex-col w-1/2">
             <div class="mb-4">

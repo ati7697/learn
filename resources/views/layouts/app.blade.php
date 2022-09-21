@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
 
 
     <!-- Fonts -->
@@ -16,18 +19,12 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <style>
-        .navFont{
-            font-family: MV Boli, serif;
-            font-size: medium;
-        }
-    </style>
 </head>
 <body>
         <header class="">
             @include('layouts.header')
         </header>
-        <div class="">
+        <div class="bg-gray-900 w-screen">
             @yield('content')
         </div>
 
