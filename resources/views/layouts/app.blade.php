@@ -20,15 +20,15 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-gray-900 w-screen">
         <header class="">
             @include('layouts.header')
         </header>
-        <div class="bg-gray-900 w-screen">
+        <div class=" w-screen">
             @yield('content')
         </div>
 
-        <footer class="">
+        <footer>
             @include('layouts.footer')
         </footer>
 

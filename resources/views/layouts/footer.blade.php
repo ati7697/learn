@@ -1,8 +1,8 @@
-<div class=" bg-gradient-to-r from-gray-600 to-gray-900 w-screen text-white  p-5 pt-10 w-screen">
-    <div class="flex flex-row ml-6">
-        <div class="flex flex-col w-1/2">
+<div class=" bg-gradient-to-r from-gray-600 to-gray-900 text-white w-screen">
+    <div class="flex lg:flex-row md:flex-row sm:flex-col m-6 justify-center">
+        <div class="flex flex-col m-6 sm:justify-center">
             <div class="mb-4">
-                <img src="https://d2wks4gidu9630.cloudfront.net/f9e7e5eb-767a-4239-a8b4-63b76580c003/svg/codinglabs-logo.svg" class="mr-3 h-6 sm:h-9" alt="codingLabs Logo">
+                <img src="https://d2wks4gidu9630.cloudfront.net/9bfe4af0-d7a0-4399-930f-d93ec6019812/svg/codinglabs-logo-stacked.svg" class="mr-3 h-6 sm:h-9" alt="codingLabs Logo">
             </div>
             <div>
                 <p class="mb-2">37 Connor Street, Burleigh Heads QLD Burleigh Heads, QLD 4220 </p>
@@ -20,14 +20,13 @@
                 </a>
                 <a class=" hover:text-blue-300 dark:hover:text-white mr-2">
                     <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path
-                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
                         </path>
                     </svg>
                 </a>
             </div>
         </div>
-        <div class="flex flex-row w-1/2 justify-center">
+        <div class="flex flex-row justify-center m-6">
             <div class="flex flex-col m-2">
                 <h2 class="m-2">About</h2>
                 <h2 class="m-2">Privacy</h2>
@@ -38,9 +37,11 @@
                 <h2 class="m-2">Laravel bootcamp</h2>
                 <h2 class="m-2">Packages</h2>
             </div>
-            <div class="w-[150px] ml-5">
+        </div>
+        <div class="flex justify-center lg:w-32 m-5">
+            <a href="https://ecologi.com/codinglabs" target="_blank">
                 <img alt="We plant trees with Ecologi" src="https://api.ecologi.com/badges/trees/6232af669837ba37c5f5816a?white=true&amp;treeOnly=true">
-            </div>
+            </a>
         </div>
     </div>
 
