@@ -21,3 +21,19 @@ createInertiaApp({
 });
 
 InertiaProgress.init({ color: '#4B5563' });
+// window.recievedJsonFromUnity =  async function recievedJsonFromUnity(text) {
+//
+//     console.log("trying to add to database")
+//
+//     try {
+//         let response = await axios.post(route('game.save'), {game_state: text});
+//
+//     }
+//     catch (e)
+//     {
+//         console.log("failed to add to databse, error: ", + e);
+//     }
+//
+//
+// }
+//console.log(window.recievedJsonFromUnity());

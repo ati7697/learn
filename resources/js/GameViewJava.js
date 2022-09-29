@@ -1,4 +1,4 @@
-import {Inertia} from "@inertiajs/inertia";
+
 
 const sendMessage = (object, method, param) => {
     window.gameInstance.SendMessage(object, method, param);
@@ -87,9 +87,7 @@ export default function unityGameSetUp() {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
     }
-
     loadingBar.style.display = "block";
-
     var script = document.createElement("script");
     script.src = loaderUrl;
     script.onload = () => {
@@ -99,7 +97,7 @@ export default function unityGameSetUp() {
             window.gameInstance = unityInstance;
 
             //console.log(gameInstance);
-            gameInstance = unityInstance;
+            //gameInstance = unityInstance;
             //console.log(unityInstance);
             loadingBar.style.display = "none";
             // fullscreenButton.onclick = () => {
@@ -111,10 +109,5 @@ export default function unityGameSetUp() {
     };
     document.body.appendChild(script);
 }
-// function recievedJsonFromUnity(text) {
-//     const newMessage = JSON.parse(text);
-//     console.log(newMessage);
-//     //document.getElementById('health_title').innerText = "Health: " + newMessage.health;
-//     //document.getElementById('lives_title').innerText = "Lives: " + newMessage.lives;
-// }
+
 
