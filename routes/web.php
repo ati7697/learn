@@ -28,8 +28,12 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::post('/save', \App\Http\Controllers\SaveGameController::class)->name('game.save');
-Route::get('/game', \App\Http\Controllers\ShowGameController::class);
-Route::get('/load', \App\Http\Controllers\LoadGameController::class)->name('game.load');
+Route::prefix('/courses')->name('courses')->group(function() {
+    Route::prefix('/{course}/lessons')->name('.lessons')->group(function() {
+        Route::get('{lesson}', \App\Http\Controllers\Lessons\ShowLessonController::class)->name('.show');
+        Route::post('{lesson}/save', \App\Http\Controllers\Lessons\SaveLessonController::class)->name('.save');
+        Route::get('{lesson}/load', \App\Http\Controllers\Lessons\LoadLessonController::class)->name('.load');
+    });
+});
 
 require __DIR__ . '/auth.php';
