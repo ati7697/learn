@@ -1,5 +1,4 @@
 
-
 const sendMessage = (object, method, param) => {
     window.gameInstance.SendMessage(object, method, param);
 };
@@ -10,15 +9,6 @@ export default function unityGameSetUp() {
     var progressBarFull = document.querySelector("#unity-progress-bar-full");
     var fullscreenButton = document.querySelector("#unity-fullscreen-button");
     var warningBanner = document.querySelector("#unity-warning");
-    //let gameInstance;
-    let testJson = {message: 'This is a json test'};
-    let jsonString = JSON.stringify(testJson);
-
-
-
-
-
-
 
 // event can be dispatched from any element, not only the document
 // Shows a temporary message banner/ribbon for a few seconds, or
@@ -31,7 +21,6 @@ export default function unityGameSetUp() {
         function updateBannerVisibility() {
             warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
-
         var div = document.createElement('div');
         div.innerHTML = msg;
         warningBanner.appendChild(div);
@@ -45,7 +34,6 @@ export default function unityGameSetUp() {
         }
         updateBannerVisibility();
     }
-
     var buildUrl = "unityBuild/Build";
     var loaderUrl = buildUrl + "/Build.loader.js";
     var config = {
@@ -95,10 +83,6 @@ export default function unityGameSetUp() {
             progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
             window.gameInstance = unityInstance;
-
-            //console.log(gameInstance);
-            //gameInstance = unityInstance;
-            //console.log(unityInstance);
             loadingBar.style.display = "none";
             // fullscreenButton.onclick = () => {
             //     unityInstance.SetFullscreen(1);
