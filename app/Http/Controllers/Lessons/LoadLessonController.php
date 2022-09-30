@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lessons;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 
-class LoadGameController extends Controller
+class LoadLessonController extends Controller
 {
     public function __invoke()
     {

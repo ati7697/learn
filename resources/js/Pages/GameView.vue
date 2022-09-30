@@ -44,6 +44,7 @@ const  requestLoadGameData = async (e) =>
 </script>
 <template>
     <Head title="GameView"/>
+
     <!--region buttons used for testing keep disabled for now-->
     <!--    <div class="flex flex-row justify-center items-center">-->
     <!--        <button type="button"-->

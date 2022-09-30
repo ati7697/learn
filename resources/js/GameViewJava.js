@@ -34,7 +34,7 @@ export default function unityGameSetUp() {
         }
         updateBannerVisibility();
     }
-    var buildUrl = "unityBuild/Build";
+    var buildUrl = "/unityBuild/Build";
     var loaderUrl = buildUrl + "/Build.loader.js";
     var config = {
         dataUrl: buildUrl + "/Build.data.unityweb",
