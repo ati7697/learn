@@ -13,7 +13,9 @@ const props = defineProps({
     current_course: Object
 })
 const recievedJsonFromUnity = async (e) => {
-    let response = await axios.post(route('courses.lessons.save', {course: props.current_course, lesson:props.current_lesson} ), {game_state: e.detail.gamestate });
+    let response = await axios.post(route('courses.lessons.save',
+        {course: props.current_course, lesson:props.current_lesson} ),
+        {game_state: e.detail.gamestate });
     try {
     } catch (e) {
         console.log("failed to add to databse, error: ", +e);
@@ -23,15 +25,15 @@ const  requestLoadGameData = async (e) =>
 {
     try {
         const reponse = await axios.get(route('courses.lessons.load', {course:props.current_course, lesson: props.current_lesson}))
-        let testmessage = reponse.data['gameLoaded'];
-        console.log("gamestate: " + testmessage);
+        let gameMessage = reponse.data['gameLoaded'];
+        //console.log("gamestate: " + gameMessage);
         if(reponse.data['gameLoaded'] == null)
         {
             gameInstance.SendMessage('GameController','newGame');
         }
         else
         {
-            gameInstance.SendMessage('GameController','loadedDataFromWeb',testmessage);
+            gameInstance.SendMessage('GameController','loadedDataFromWeb',gameMessage);
         }
     }
     catch (e)
