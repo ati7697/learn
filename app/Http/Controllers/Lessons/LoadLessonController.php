@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers\Lessons;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Course;
+use App\Models\Lesson;
+use App\Http\Controllers\Controller;
 
 class LoadLessonController extends Controller
 {
-    public function __invoke()
+    public function __invoke(Course $course, Lesson $lesson)
     {
         try {
-            $state = User::find(1)->lessons->find(1)->pivot->game_state;
-            $string_message = $state;
+            $user = User::find(1);
+            $state =$user->lessons->find($lesson->id)->pivot->game_state;
         } catch (\Exception $e) {
             return $e->getMessage();
         }
-        return response()->json(['gameLoaded' => $string_message]);
+        return response()->json(['gameLoaded' => $state]);
     }
 }

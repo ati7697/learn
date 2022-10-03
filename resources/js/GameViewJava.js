@@ -71,7 +71,6 @@ export default function unityGameSetUp() {
         unityShowBanner('WebGL builds are not supported on mobile devices.');
     } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
         canvas.style.width = "960px";
         canvas.style.height = "600px";
     }

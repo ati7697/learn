@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers\Lessons;
 
-use App\Http\Controllers\Controller;
+use Inertia\Response;
 use App\Models\Course;
 use App\Models\Lesson;
 use Illuminate\Http\Request;
-use Inertia\Response;
+use App\Http\Controllers\Controller;
 
 class ShowLessonController extends Controller
 {
     public function __invoke(Request $request, Course $course, Lesson $lesson): Response
     {
-        //dd($lesson);
-
-        return inertia('GameView', ['lesson'=> $lesson]);
+        return inertia('Lessons/Show', ['current_lesson'=> $lesson, 'current_course'=> $course]);
     }
 }
