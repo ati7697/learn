@@ -13,7 +13,10 @@ class LoadLessonController extends Controller
     {
         try {
             $user = User::find(1);
-            $state =$user->lessons->find($lesson->id)->pivot->game_state;
+            $state = auth()->user()->lessons()
+                            ->find($lesson->id)
+                            ->pivot
+                            ->game_state;
         } catch (\Exception $e) {
             return $e->getMessage();
         }
