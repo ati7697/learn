@@ -38,7 +38,7 @@ const checkAnswer = (e) => {
 
 }
 const returnToGame = () => {
-    showChallenge.value= false;
+    showChallenge.value = false;
     gameInstance.SendMessage('GameController', "ReturnToGame")
 }
 const recievedJsonFromUnity = async (e) => {
