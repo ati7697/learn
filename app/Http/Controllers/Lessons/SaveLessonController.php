@@ -15,7 +15,7 @@ class SaveLessonController extends Controller
     {
         $user = User::find(1);
         $user->lessons()->syncWithPivotValues(
-            [$lesson['id']],
+           [ $lesson->id ]
             ['game_state'=>$request->input('game_state')]
         );
         return response()->json(['gameSaved' => true]);
