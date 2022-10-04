@@ -10,8 +10,11 @@ use App\Http\Controllers\Controller;
 
 class ShowLessonController extends Controller
 {
-    public function __invoke(Request $request, Course $course, Lesson $lesson): Response
+    public function __invoke(Course $course, Lesson $lesson): Response
     {
-        return inertia('Lessons/Show', ['current_lesson'=> $lesson, 'current_course'=> $course]);
+        return inertia('Lessons/Show', [
+            'lesson'=> $lesson,
+            'course'=> $course
+        ]);
     }
 }
