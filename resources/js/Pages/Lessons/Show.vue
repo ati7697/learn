@@ -51,22 +51,16 @@ const recievedJsonFromUnity = async (e) => {
         console.log("failed to add to databse, error: ", +e);
     }
 }
-const  requestLoadGameData = async (e) =>
-{
+const requestLoadGameData = async (e) => {
     try {
-        const reponse = await axios.get(route('courses.lessons.load', {course:props.course, lesson: props.lesson}))
+        let response = await axios.get(route('courses.lessons.load', {course:props.course, lesson: props.lesson}))
         let gameMessage = reponse.data['gameLoaded'];
-        if(reponse.data['gameLoaded'] == null)
-        {
+        if (response.data['gameLoaded'] == null) {
             gameInstance.SendMessage('GameController','newGame');
-        }
-        else
-        {
+        } else {
             gameInstance.SendMessage('GameController','loadedDataFromWeb',gameMessage);
         }
-    }
-    catch (e)
-    {
+    } catch (e) {
         gameInstance.SendMessage('GameController','newGame');
         console.log("axios error: "+ e);
     }
