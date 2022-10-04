@@ -13,9 +13,8 @@ class SaveLessonController extends Controller
 {
     public function __invoke(Request $request, Course $course, Lesson $lesson): JsonResponse
     {
-        $user = User::find(1);
-        $user->lessons()->syncWithPivotValues(
-           [ $lesson->id ]
+        auth()->user()->lessons()->syncWithPivotValues(
+           [ $lesson->id ],
             ['game_state' => $request->input('game_state')]
         );
         return response()->json(['gameSaved' => true]);

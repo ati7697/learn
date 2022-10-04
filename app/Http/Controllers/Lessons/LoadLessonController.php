@@ -12,7 +12,6 @@ class LoadLessonController extends Controller
     public function __invoke(Course $course, Lesson $lesson)
     {
         try {
-            $user = User::find(1);
             $state = auth()->user()->lessons()
                             ->find($lesson->id)
                             ->pivot

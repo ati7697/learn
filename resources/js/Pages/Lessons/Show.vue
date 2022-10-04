@@ -9,12 +9,12 @@ onMounted(() => {
     window.addEventListener("requestData", (e) => requestLoadGameData(e));
 })
 const props = defineProps({
-    current_lesson: Object ,
-    current_course: Object
+    lesson: Object ,
+    course: Object
 })
 const recievedJsonFromUnity = async (e) => {
     let response = await axios.post(route('courses.lessons.save',
-        {course: props.current_course, lesson:props.current_lesson} ),
+        {course: props.course, lesson:props.lesson} ),
         {game_state: e.detail.gamestate });
     try {
     } catch (e) {
@@ -24,9 +24,8 @@ const recievedJsonFromUnity = async (e) => {
 const  requestLoadGameData = async (e) =>
 {
     try {
-        const reponse = await axios.get(route('courses.lessons.load', {course:props.current_course, lesson: props.current_lesson}))
+        const reponse = await axios.get(route('courses.lessons.load', {course:props.course, lesson: props.lesson}))
         let gameMessage = reponse.data['gameLoaded'];
-        //console.log("gamestate: " + gameMessage);
         if(reponse.data['gameLoaded'] == null)
         {
             gameInstance.SendMessage('GameController','newGame');
