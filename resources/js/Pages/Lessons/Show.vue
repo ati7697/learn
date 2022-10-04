@@ -15,10 +15,12 @@ const props = defineProps({
     course: Object,
 
 })
+
 let showChallenge = ref(false);
-let challengeReponse = ref("hello");
-let challengeAnswer = ref(" ");
-const recievedChallengeFromUnity =  async (e)=>
+let challengeResponse = ref("");
+let challengeAnswer = ref("");
+
+const receivedChallengeFromUnity =  async (e) => {
 {
     challengeAnswer.value = e.detail.challenge;
     console.log(challengeAnswer.value);
