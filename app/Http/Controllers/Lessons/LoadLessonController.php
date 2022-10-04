@@ -12,14 +12,11 @@ class LoadLessonController extends Controller
     public function __invoke(Course $course, Lesson $lesson)
     {
         try {
-            $state = auth()->user()
-                ->lessons()
-                ->find($lesson->id)
-                ->pivot
-                ->game_state;
+            $state = auth()->user()->lessons()->find($lesson->id)->pivot->game_state;
         } catch (\Exception $e) {
             return $e->getMessage();
         }
+
         return response()->json(['gameLoaded' => $state]);
     }
 }
