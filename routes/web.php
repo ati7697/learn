@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +28,12 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::prefix('/courses')->name('courses')->group(function () {
+    Route::middleware('auth')->prefix('/{course}/lessons')->name('.lessons')->group(function () {
+        Route::get('{lesson}', \App\Http\Controllers\Lessons\ShowLessonController::class)->name('.show');
+        Route::post('{lesson}/save', \App\Http\Controllers\Lessons\SaveLessonController::class)->name('.save');
+        Route::get('{lesson}/load', \App\Http\Controllers\Lessons\LoadLessonController::class)->name('.load');
+    });
+});
+
+require __DIR__ . '/auth.php';
