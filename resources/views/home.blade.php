@@ -8,8 +8,8 @@
     <div class="flex flex-col navFont w-screen">
         {{--  gallery --}}
         @include('homeLayouts.gallery')
-        {{--skill--}}
-        @include('homeLayouts.skill')
+        {{--courses--}}
+        @include('homeLayouts.course')
         {{--purches--}}
         @include('homeLayouts.purchase')
         {{-- expectation--}}
