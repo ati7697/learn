@@ -26,9 +26,57 @@
         </div>
     </div>
     <div class="lg:flex lg:flex-row lg:justify-center md:flex md:flex-row md:justify-center sm:grid sm:grid-cols-2  mt-60">
-        <div class="m-4"><button onmouseover="changeBackgroundImage('image/gallaryp1.png')"><img src="{{url('image/gallaryp1.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl"> </button> </div>
-        <div class="m-4"><button onmouseover="changeBackgroundImage('image/gallaryp2.png')"><img src="{{url('image/gallaryp2.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl"> </button> </div>
-        <div class="m-4"> <button onmouseover="changeBackgroundImage('image/gallaryp3.png')"><img src="{{url('image/gallaryp3.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl"> </button></div>
-        <div class="m-4"> <button onmouseover="changeBackgroundImage('image/gallaryp4.png')"><img src="{{url('image/gallaryp4.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl"></button></div>
+        <div class="m-4 group"><img src="{{url('image/gallaryp1.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl group-hover:scale-150 transition ease-out duration-200 group-hover:brightness-50">
+            <div class="hidden group-hover:flex flex-col absolute -bottom-80 left-40 space-y-2 p-2 bg-gradient-to-b from-transparent via-black to-black w-60">
+                <div class="bg-orange-600 py-1 px-2 rounded hover:bg-orange-400 text-white w-fit ">
+                    <p>Laravel</p>
+                </div>
+                <div class="text-gray-500  text-sm   hover:text-white">
+                    <p>8 hours</p>
+                </div>
+                <div class="text-gray-500  text-sm hover:text-white">
+                    <p>Beginner</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-4 group"><img src="{{url('image/gallaryp2.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl group-hover:scale-150 transition ease-out duration-200 group-hover:brightness-50">
+            <div class="hidden group-hover:flex flex-col absolute -bottom-80 left-96 space-y-2 p-2 w-72 shadow shadow-lg shadow-black">
+                <div class="bg-orange-600 py-1 px-6 rounded hover:bg-orange-400 text-white w-fit ">
+                    <p>Vue</p>
+                </div>
+                <div class="text-gray-500  text-sm   hover:text-white">
+                    <p>8 hours</p>
+                </div>
+                <div class="text-gray-500  text-sm hover:text-white">
+                    <p>Beginner</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-4 group"><img src="{{url('image/gallaryp3.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl group-hover:scale-150 transition ease-out duration-200 group-hover:brightness-50">
+            <div class="hidden group-hover:flex flex-col absolute -bottom-80 left-[610px] space-y-2 p-2 w-72 shadow shadow-lg shadow-black">
+                <div class="bg-orange-600 py-1 px-2 rounded hover:bg-orange-400 text-white w-fit ">
+                    <p>Inertia</p>
+                </div>
+                <div class="text-gray-500  text-sm   hover:text-white">
+                    <p>8 hours</p>
+                </div>
+                <div class="text-gray-500  text-sm hover:text-white">
+                    <p>Beginner</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-4 group"><img src="{{url('image/gallaryp4.png')}}" class="lg:w-[200px] md:w-[300px] rounded-2xl group-hover:scale-150 transition ease-out duration-200 group-hover:brightness-50">
+            <div class="hidden group-hover:flex flex-col absolute -bottom-80 right-32 space-y-2 p-2 w-72 shadow shadow-lg shadow-black">
+                <div class="bg-orange-600 py-1 px-2 rounded hover:bg-orange-400 text-white w-fit ">
+                    <p>LiveWire</p>
+                </div>
+                <div class="text-gray-500  text-sm   hover:text-white">
+                    <p>8 hours</p>
+                </div>
+                <div class="text-gray-500  text-sm hover:text-white">
+                    <p>Beginner</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

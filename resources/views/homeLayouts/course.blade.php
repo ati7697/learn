@@ -1,22 +1,22 @@
-<div class="flex flex-col p-5 text-amber-50 w-screen mt-20">
+<div class="flex flex-col p-5 text-amber-50 w-screen mt-20 mb-20">
     <div class="mb-7">
     <div class="justify-center text-lg font-bold mt-20 text-center"><h1>Learn essential frameworks in web development</h1></div>
         <div class="flex flex-row justify-center space-x-6 " >
             <div class="flex flex-row mt-7">
-                <img src="{{url('image/laravel.png')}}" class="w-32 h-fit shadow-lg shadow-black">
+                <img src="{{url('image/laravel.png')}}" class="w-32 h-fit  hover:scale-125 ">
 {{--                <p class="text-[#E74432] font-extrabold text-2xl mt-5">Laravel</p>--}}
             </div>
             <div class="flex flex-row mt-5">
-                <img src="{{url('image/inertiajs.png')}}" class="w-32 h-fit shadow-lg shadow-black">
+                <img src="{{url('image/inertiajs.png')}}" class="w-32 h-fit hover:scale-125 hover:ml-8 hover:mr-8">
 
             </div>
 
             <div class="flex flex-row mt-8">
-                <img src="{{url('image/liveWire.png')}}" class="w-36 h-fit shadow-lg shadow-black">
+                <img src="{{url('image/liveWire.png')}}" class="w-36 h-fit hover:scale-125 hover:ml-10 hover:mr-10">
             </div>
 
             <div class="flex flex-row">
-                <img src="{{url('image/vue.png')}}" class="w-20 h-fit mt-7 shadow-lg shadow-black">
+                <img src="{{url('image/vue.png')}}" class="w-20 h-fit mt-7 hover:scale-125 ">
             </div>
         </div>
     </div>

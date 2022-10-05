@@ -1,6 +1,6 @@
-<div class=" bg-gradient-to-r from-gray-600 to-gray-900 text-white w-screen">
+<footer class=" bg-gradient-to-r from-gray-600 to-gray-900 text-white w-screen">
     <div class="flex lg:flex-row md:flex-row sm:flex-col m-6 justify-center">
-        <div class="flex flex-col m-6 sm:justify-center">
+        <div class="flex flex-col m-6">
             <div class="mb-4">
                 <img src="https://d2wks4gidu9630.cloudfront.net/9bfe4af0-d7a0-4399-930f-d93ec6019812/svg/codinglabs-logo-stacked.svg" class="mr-3 h-6 sm:h-9" alt="codingLabs Logo">
             </div>
@@ -46,4 +46,4 @@
     </div>
 
     <div class="flex justify-center"> <p>© Coding Labs Pty Ltd 2018-2022</p></div>
-</div>
+</footer>
