@@ -8,13 +8,13 @@
         <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">
             +40 Courses
         </div>
-        <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">
+        <div class="border-2 border-[#76F1BA] p-10 m-4  hover:bg-gradient-to-r from-[#76F1BA] to-[#4e8e71]">
             +40 Lessons
         </div>
-        <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">
+        <div class="border-2 border-[#76F1BA] p-10 m-4  hover:bg-gradient-to-r from-[#76F1BA] to-[#4e8e71]">
             Game and Fun
         </div>
-        <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">
+        <div class="border-2 border-[#76F1BA] p-10 m-4  hover:bg-gradient-to-r from-[#76F1BA] to-[#4e8e71]">
             Student material
         </div>
 
@@ -22,7 +22,7 @@
 
     <div class="flex flex-row justify-center">
         <div class="flex flex-row m-2">
-            <svg class="h-8 w-8 text-orange-500 mr-3" width="24" height="24" viewBox="0 0 24 24"
+            <svg class="h-8 w-8 text-[#76F1BA] mr-3" width="24" height="24" viewBox="0 0 24 24"
                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                  stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z"/>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="flex flex-row m-2">
-            <svg class="h-8 w-8 text-orange-500 mr-3" width="24" height="24" viewBox="0 0 24 24"
+            <svg class="h-8 w-8 text-[#76F1BA] mr-3" width="24" height="24" viewBox="0 0 24 24"
                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                  stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z"/>
@@ -48,7 +48,7 @@
     </div>
     <div class="flex flex-row justify-center">
         <div class="flex flex-row m-2">
-            <svg class="h-8 w-8 text-orange-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            <svg class="h-8 w-8 text-[#76F1BA] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
                 <polyline points="17 6 23 6 23 12"/>
@@ -56,7 +56,7 @@
             <h2>Lorem ipsum dolor sit amet!</h2>
         </div>
         <div class="flex flex-row m-2">
-            <svg class="h-8 w-8 text-orange-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            <svg class="h-8 w-8 text-[#76F1BA] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="16 18 22 12 16 6"/>
                 <polyline points="8 6 2 12 8 18"/>
