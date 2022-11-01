@@ -5,7 +5,7 @@
         </h1>
     </div>
     <div class="flex lg:flex-row md:flex-row sm:flex-col xs:flex-col m-10 justify-center text-center font-bold">
-        <div class="border-2 border-orange-500 p-10 m-4  hover:bg-gradient-to-r from-orange-400 to-orange-500">
+        <div class="border-2 border-[#76F1BA] p-10 m-4  hover:bg-gradient-to-r from-[#76F1BA] to-[#4e8e71]">
             +40 Courses
         </div>
         <div class="border-2 border-[#76F1BA] p-10 m-4  hover:bg-gradient-to-r from-[#76F1BA] to-[#4e8e71]">
@@ -20,7 +20,7 @@
 
     </div>
 
-    <div class="flex flex-row justify-center">
+    <div class="flex flex-row justify-center ">
         <div class="flex flex-row m-2">
             <svg class="h-8 w-8 text-[#76F1BA] mr-3" width="24" height="24" viewBox="0 0 24 24"
                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
