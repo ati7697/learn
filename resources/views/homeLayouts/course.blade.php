@@ -1,10 +1,9 @@
 <div class="flex flex-col p-5 text-amber-50 w-screen mt-20 mb-20">
     <div class="mb-7">
     <div class="justify-center text-lg font-bold mt-20 text-center"><h1>Learn essential frameworks in web development</h1></div>
-        <div class="flex flex-row justify-center space-x-6 " >
+        <div class="flex md:flex-row sm:flex-col justify-center items-center space-x-6 " >
             <div class="flex flex-row mt-7">
                 <img src="{{url('image/laravel.png')}}" class="w-32 h-fit  hover:scale-125 ">
-{{--                <p class="text-[#E74432] font-extrabold text-2xl mt-5">Laravel</p>--}}
             </div>
             <div class="flex flex-row mt-5">
                 <img src="{{url('image/inertiajs.png')}}" class="w-32 h-fit hover:scale-125 hover:ml-8 hover:mr-8">
@@ -22,11 +21,11 @@
     </div>
     <div class="justify-center text-lg font-bold mt-20 text-center"><h1>Try our demo</h1></div>
     <div><h2 class="justify-center text-lg text-center">Check out our Laravel course demo</h2></div>
-    <div class="flex lg:flex-row md:flex-row sm:flex-col m-2">
-        <div class="flex flex-col m-3 h-fit w-1/3 rounded-xl justify-center">
+    <div class="flex  md:flex-row sm:flex-col m-2 sm:space-y-8">
+        <div class="flex flex-col m-3 h-fit md:w-1/3 rounded-xl justify-center">
             <div class="flex flex-col justify-center mb-3 group">
                 <img src="{{url('image/gamebg.png')}}" class="rounded w-full h-full md:group-hover:opacity-50 md:group-hover:translate-x-1 md:group-hover:blur-sm">
-                <div class="flex text-left justify-center m-5 text-white absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150 ">
+                <div class="flex text-left justify-center m-5 w-max text-white absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.</p>
                 </div>
@@ -50,12 +49,12 @@
                 <h2>Train your skills with code challenges</h2>
             </div>
             <div class="flex md:hidden lg:m-0 md:m-0 sm:m-2 ">
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                <p class="text-justify sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua.</p>
             </div>
 
         </div>
-        <div class="flex flex-col m-3 h-fit w-1/3 rounded-xl justify-center">
+        <div class="flex flex-col m-3 h-fit md:w-1/3 rounded-xl justify-center">
             <div class="flex flex-col justify-center mb-3 group">
                 <img src="{{url('image/achiv.png')}}" class="rounded w-full h-full md:group-hover:opacity-50 md:group-hover:translate-x-1 md:group-hover:blur-sm">
                 <div class="flex text-left justify-center m-5 text-white absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150 ">
@@ -68,12 +67,12 @@
                 <h2>Unlock Achievements</h2>
             </div>
             <div class="flex md:hidden lg:m-0 md:m-0 sm:m-2 ">
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                <p class="text-justify sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua.</p>
             </div>
 
         </div>
-        <div class="flex flex-col m-3 h-fit w-1/3 rounded-xl justify-center items-center">
+        <div class="flex flex-col m-3 h-fit md:w-1/3 rounded-xl justify-center items-center">
             <div class="flex flex-col justify-center mb-3 group">
                 <img src="{{url('image/gamebg3.png')}}" class="rounded object-cover md:group-hover:opacity-50 md:group-hover:translate-x-1 md:group-hover:blur-sm">
                 <div class="flex text-left justify-center m-5 text-white absolute invisible md:group-hover:visible transform  md:w-40 lg:w-80 md:transition-all md:origin-left md:rotate-90 md:group-hover:rotate-0 group-hover:duration-150 ">
@@ -86,7 +85,7 @@
                 <h2>Learn fundamentals while playing</h2>
             </div>
             <div class="flex md:hidden lg:m-0 md:m-0 sm:m-2 ">
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                <p class="text-justify sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua.</p>
             </div>
 
