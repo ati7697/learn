@@ -11,7 +11,7 @@
         {{--courses--}}
         @include('homeLayouts.course')
         {{--purches--}}
-        @include('homeLayouts.purchase')
+{{--        @include('homeLayouts.purchase')--}}
         {{-- expectation--}}
         @include('homeLayouts.expectation')
     </div>
