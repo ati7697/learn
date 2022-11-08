@@ -1,4 +1,4 @@
-<footer class=" bg-gradient-to-r from-gray-600 to-gray-900 text-white w-screen">
+<footer class=" bg-black text-white w-screen">
     <div class="flex lg:flex-row md:flex-row sm:flex-col m-6 justify-center">
         <div class="flex flex-col m-6">
             <div class="mb-4">
