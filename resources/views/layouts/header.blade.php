@@ -7,15 +7,6 @@
                         <img src="https://d2wks4gidu9630.cloudfront.net/9bfe4af0-d7a0-4399-930f-d93ec6019812/svg/codinglabs-logo-stacked.svg"  alt="Logo" class="h-6 mr-2">
                     </a>
                 </div>
-                <!-- Primary Navbar items -->
-                <div class="hidden md:flex items-center md:justify-center space-x-3">
-                    <a href="" class="py-4 px-2 text-orange-400 border-b-4 border-orange-500 font-semibold ">Apps</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-orange-400 transition duration-300">Services</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-orange-400 transition duration-300">Developers</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-orange-400 transition duration-300">Bootcamp</a>
-                    <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-orange-400 transition duration-300">About</a>
-
-                </div>
 
             <!-- Secondary Navbar items -->
             <div class="hidden md:flex items-center space-x-3 ">
@@ -39,16 +30,6 @@
                 </button>
             </div>
         </div>
-    </div>
-    <!-- mobile menu -->
-    <div class="hidden mobile-menu">
-        <ul class="text-white">
-            <li class="active"><a href="" class="block text-sm px-2 py-4 text-white bg-orange-400 font-semibold">Apps</a></li>
-            <li><a href="#" class="block text-sm px-2 py-4 hover:bg-orange-400 transition duration-300">Services</a></li>
-            <li><a href="#" class="block text-sm px-2 py-4 hover:bg-orange-400 transition duration-300">Developers</a></li>
-            <li><a href="#" class="block text-sm px-2 py-4 hover:bg-orange-400 transition duration-300">Bootcamp</a></li>
-            <li><a href="#" class="block text-sm px-2 py-4 hover:bg-orange-400 transition duration-300">About</a></li>
-        </ul>
     </div>
     <script>
         const btn = document.querySelector("button.mobile-menu-button");
