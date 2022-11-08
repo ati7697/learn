@@ -2,13 +2,11 @@
 @section('content')
     <div class="flex flex-col navFont w-screen">
         {{--  gallery --}}
-        @include('homeLayouts.gallery')
+        @include('public.partials.gallery')
         {{--courses--}}
-        @include('homeLayouts.course')
-        {{--purches--}}
-{{--        @include('homeLayouts.purchase')--}}
+        @include('public.partials.course')
         {{-- expectation--}}
-        @include('homeLayouts.expectation')
+        @include('public.partials.expectation')
     </div>
 @endsection
 
