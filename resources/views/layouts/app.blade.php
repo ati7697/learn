@@ -16,9 +16,7 @@
 </head>
 <body class="bg-gray-900 w-screen">
     <x-header />
-    <div class=" w-screen">
-        @yield('content')
-    </div>
+    @yield('content')
     <x-footer />
 
 </body>

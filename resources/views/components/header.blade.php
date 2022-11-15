@@ -7,7 +7,6 @@
                     <img src="https://d2wks4gidu9630.cloudfront.net/9bfe4af0-d7a0-4399-930f-d93ec6019812/svg/codinglabs-logo-stacked.svg"  alt="Logo" class="h-6 mr-2">
                 </a>
             </div>
-            {{--@TODO:: check why is not finding login and register--}}
             @if (auth()->check())
                 <div class="m-3">
                     @auth()
